@@ -25,7 +25,7 @@ const vqv = (string, number) => {
   return `Oi, meu nome é ${string}!
 Tenho ${number} anos,
 trabalho na Trybe e mando muito em programação!
-#VQV!` 
+#VQV!`; 
 };
 
 module.exports = vqv;
