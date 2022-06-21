@@ -94,14 +94,30 @@
 // DICA: para isso, você precisará percorrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 // const clientOrder = (string) => string;
 const createMenu = (object) => {
-  const array = [];  
+  const array = [];   
   return {
     fetchMenu: () => object,
     consumption: array,
     order: (string) => array.push(string),
+    pay: () => {
+      const foodPrices = Object.values(object.food);
+      const drinkPrices = Object.values(object.drink);
+      let totalPrice = 0;   
+      for (const item of array) {    
+        if (item === 'coxinha') {
+          totalPrice += foodPrices[0];
+        } else if (item === 'sopa') {
+          totalPrice += foodPrices[1];
+        } else if (item === 'agua') {
+          totalPrice += drinkPrices[0];
+        } else if (item === 'cerveja') {
+          totalPrice += drinkPrices[1];
+        }
+      }
+      const orderTotal = totalPrice * 1.1;
+      return orderTotal;
+    },
   };
 };
-console.log(createMenu({ food: {}, drink: {} }));
-console.log(createMenu({ food: {}, drink: {} }).consumption);
 
 module.exports = createMenu;
