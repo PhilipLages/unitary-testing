@@ -97,10 +97,11 @@ const createMenu = (object) => {
   const array = [];  
   return {
     fetchMenu: () => object,
-    order: (string) => array.push(string),
     consumption: array,
+    order: (string) => array.push(string),
   };
 };
-console.log(createMenu({ food: {}, drink: {} }).order('coxinha'));
+console.log(createMenu({ food: {}, drink: {} }));
 console.log(createMenu({ food: {}, drink: {} }).consumption);
+
 module.exports = createMenu;
