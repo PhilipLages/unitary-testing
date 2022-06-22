@@ -139,7 +139,7 @@ describe('10 - Implemente os casos de teste e a função `createMenu`', () => {
     prices.order('coxinha');
     prices.order('agua');
     prices.order('coxinha');
-    const total = prices.pay;
+    const total = prices.pay();
     expect(total).toBeCloseTo(12.87);
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
