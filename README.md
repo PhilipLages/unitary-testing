@@ -12,3 +12,9 @@ For this project  at [Trybe](https://www.betrybe.com/), I had to write codes and
 <li> Jest;
 <li> Logic Programming;
 
+## How to inictialize it:
+
+<ol>
+<li> Copy repo SSH link;
+<li> Enter git clone (repo SSH link) on your terminal;
+<li> Enter npm install on your terminal.
